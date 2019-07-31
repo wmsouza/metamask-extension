@@ -18,10 +18,9 @@ Simply follow the steps in [the publishing guide](./publishing.md).
 
 ### Prepare Rollback Release
 
-1. Check out the tagged commit for the release before this new release.
-2. Increment the version over the new release by one patch.
-3. Merge the changelog of the new release into this branch, and make its own changelog refer to rolling back those changes.
-4. Push to the main repository and pull request against `master` prominently noting this is a `DO NOT MERGE` rollback pull request.
+Follow the steps in [the publishing guide](./publishing.md) with a different context:
+
+Instead of creating a version branch off of the main branch, create a version branch off of the latest release. It is customary that this release increments the patch version number.
 
 ### Roll the normal release out
 

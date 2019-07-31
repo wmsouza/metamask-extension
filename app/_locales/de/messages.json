@@ -131,6 +131,12 @@
   "buyCoinbaseExplainer": {
     "message": "Coinbase ist die weltweit bekannteste Art und Weise um Bitcoin, Ethereum und Litecoin zu kaufen und verkaufen."
   },
+  "buyCoinSwitch": {
+    "message": "Auf CoinSwitch kaufen"
+  },
+  "buyCoinSwitchExplainer": {
+    "message": "CoinSwitch ist die One-Stop-Destination, um mehr als 300 Kryptowährungen zum besten Preis zu tauschen."
+  },
   "ok": {
     "message": "Ok"
   },
@@ -163,6 +169,9 @@
   },
   "continueToCoinbase": {
     "message": "Zu Coinbase fortfahren"
+  },
+  "continueToCoinSwitch": {
+    "message": "Zu CoinSwitch fortfahren"
   },
   "contractDeployment": {
     "message": "Smart Contract Ausführung"
@@ -239,10 +248,6 @@
   },
   "depositBTC": {
     "message": "Zahle dein BTC in die unten stehende Adresse ein:"
-  },
-  "depositCoin": {
-    "message": "Zahle deine $1 in die unten stehende Adresse ein",
-    "description": "Teilt dem Benutzer mit welchen Token er beim Einzahlen mit Shapeshift ausgewählt hat"
   },
   "depositEth": {
     "message": "Eth kaufen"

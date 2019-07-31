@@ -60,20 +60,6 @@ class ExtensionPlatform {
     }
   }
 
-  addMessageListener (cb) {
-    extension.runtime.onMessage.addListener(cb)
-  }
-
-  sendMessage (message, query = {}) {
-    const id = query.id
-    delete query.id
-    extension.tabs.query({ ...query }, tabs => {
-      tabs.forEach(tab => {
-        extension.tabs.sendMessage(id || tab.id, message)
-      })
-    })
-  }
-
   _showConfirmedTransaction (txMeta) {
 
     this._subscribeToNotificationClicked()
@@ -82,7 +68,7 @@ class ExtensionPlatform {
     const nonce = parseInt(txMeta.txParams.nonce, 16)
 
     const title = 'Confirmed transaction'
-    const message = `Transaction ${nonce} confirmed! View on EtherScan`
+    const message = `Transaction ${nonce} confirmed! View on Etherscan`
     this._showNotification(title, message, url)
   }
 
@@ -106,12 +92,12 @@ class ExtensionPlatform {
   }
 
   _subscribeToNotificationClicked () {
-    if (!extension.notifications.onClicked.hasListener(this._viewOnEtherScan)) {
-      extension.notifications.onClicked.addListener(this._viewOnEtherScan)
+    if (!extension.notifications.onClicked.hasListener(this._viewOnEtherscan)) {
+      extension.notifications.onClicked.addListener(this._viewOnEtherscan)
     }
   }
 
-  _viewOnEtherScan (txId) {
+  _viewOnEtherscan (txId) {
     if (txId.startsWith('http://')) {
       extension.tabs.create({ url: txId })
     }

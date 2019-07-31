@@ -1,4 +1,4 @@
-@import './buttons.scss';
+@import '../../../components/ui/button/buttons';
 
 @import './footer.scss';
 
@@ -42,8 +42,6 @@
 
 @import './account-details-dropdown.scss';
 
-@import './account-dropdown-mini.scss';
-
 @import './editable-label.scss';
 
 @import './pages/index.scss';
@@ -52,4 +50,4 @@
 
 @import './tooltip.scss';
 
-@import '../../../components/index';
+@import '../../../components/app/index';

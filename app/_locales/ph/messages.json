@@ -110,6 +110,12 @@
   "buyCoinbaseExplainer": {
     "message": "Ang Coinbase ang pinakasikat na paraan upang bumili at magbenta ng Bitcoin, Ethereum, at Litecoin sa buong mundo."
   },
+  "buyCoinSwitch": {
+    "message": "Bumili sa CoinSwitch"
+  },
+  "buyCoinSwitchExplainer": {
+    "message": "Ang CoinSwitch ay isang one-stop destination upang makipagpalitan ng higit sa 300 mga cryptocurrency sa pinakamahusay na rate."
+  },
   "cancel": {
     "message": "Kanselahin"
   },
@@ -130,6 +136,9 @@
   },
   "continueToCoinbase": {
     "message": "Magpatuloy sa Coinbase"
+  },
+  "continueToCoinSwitch": {
+    "message": "Magpatuloy sa CoinSwitch"
   },
   "contractDeployment": {
     "message": "Pag-deploy ng Contract"
@@ -191,10 +200,6 @@
   },
   "depositBTC": {
     "message": "I-deposito ang iyong BTC sa address na ito:"
-  },
-  "depositCoin": {
-    "message": "I-deposito ang iyong $1 sa address na ito",
-    "description": "Sinasabihan ang user kung ano ang coin na kanilang pinili para I-deposito gamit ang shapeshift"
   },
   "depositEth": {
     "message": "I-deposito ang Eth"
@@ -313,7 +318,7 @@
     "message": "i-click ito",
     "description": "tulad ng -i-click dito- para sa mas maraming impormasyon (kasama ng troubleTokenBalances)"
   },
-  "hide": { 
+  "hide": {
     "message": "Itago"
   },
   "hideToken": {

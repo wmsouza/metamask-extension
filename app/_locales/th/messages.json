@@ -128,6 +128,12 @@
   "buyCoinbaseExplainer": {
     "message": "Coinbase เป็นแหล่งซื้อขายบิตคอยน์ไลท์คอยน์และอีเธอเรียมที่ได้รับความนิยมสูงสุดในโลก"
   },
+  "buyCoinSwitch": {
+    "message": "ซื้อด้วย CoinSwitch"
+  },
+  "buyCoinSwitchExplainer": {
+    "message": "CoinSwitch เป็นจุดหมายปลายทางแบบครบวงจรในการแลกเปลี่ยนสกุลเงินมากกว่า 300 ครั้งในอัตราที่ดีที่สุด"
+  },
   "cancel": {
     "message": "ยกเลิก"
   },
@@ -154,6 +160,9 @@
   },
   "continueToCoinbase": {
     "message": "ไปที่ Coinbase"
+  },
+  "continueToCoinSwitch": {
+    "message": "ไปที่ CoinSwitch"
   },
   "contractDeployment": {
     "message": "การติดตั้งสัญญา"
@@ -230,10 +239,6 @@
   },
   "depositBTC": {
     "message": "ฝากบิตคอยน์ของคุณไปที่แอดเดรสด้านล่างนี้:"
-  },
-  "depositCoin": {
-    "message": "ฝาก $1 ของคุณไปที่แอดเดรสด้านล่างนี้:",
-    "description": "Tells the user what coin they have selected to deposit with shapeshift"
   },
   "depositEth": {
     "message": "การฝากอีเธอร์"

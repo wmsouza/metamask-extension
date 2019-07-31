@@ -128,6 +128,12 @@
   "buyCoinbaseExplainer": {
     "message": "Coinbase is 's werelds populairste manier om Bitcoin, Ethereum en Litecoin te kopen en verkopen."
   },
+  "buyCoinSwitch": {
+    "message": "Koop op CoinSwitch"
+  },
+  "buyCoinSwitchExplainer": {
+    "message": "CoinSwitch is de one-stop-bestemming om meer dan 300 cryptocurrencies tegen de beste prijs in te wisselen."
+  },
   "cancel": {
     "message": "Annuleer"
   },
@@ -154,6 +160,9 @@
   },
   "continueToCoinbase": {
     "message": "Ga verder naar Coinbase"
+  },
+  "continueToCoinSwitch": {
+    "message": "Ga verder naar CoinSwitch"
   },
   "contractDeployment": {
     "message": "Contractimplementatie"
@@ -230,10 +239,6 @@
   },
   "depositBTC": {
     "message": "Stort uw BTC op het onderstaande adres:"
-  },
-  "depositCoin": {
-    "message": "Stort uw $1 op het onderstaande adres",
-    "description": "Laat de gebruiker weten welk muntje ze hebben geselecteerd om te deponeren met shapeshift"
   },
   "depositEth": {
     "message": "Aanbetaling Eth"

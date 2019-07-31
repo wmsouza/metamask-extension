@@ -1,10 +1,10 @@
 const render = require('react-dom').render
 const h = require('react-hyperscript')
-const Root = require('./app/root')
-const actions = require('./app/actions')
-const configureStore = require('./app/store')
+const Root = require('./app/pages')
+const actions = require('./app/store/actions')
+const configureStore = require('./app/store/store')
 const txHelper = require('./lib/tx-helper')
-const { fetchLocale } = require('./i18n-helper')
+const { fetchLocale } = require('./app/helpers/utils/i18n-helper')
 const log = require('loglevel')
 
 module.exports = launchMetamaskUi
@@ -12,19 +12,19 @@ module.exports = launchMetamaskUi
 log.setLevel(global.METAMASK_DEBUG ? 'debug' : 'warn')
 
 function launchMetamaskUi (opts, cb) {
-  var accountManager = opts.accountManager
-  actions._setBackgroundConnection(accountManager)
+  var {backgroundConnection} = opts
+  actions._setBackgroundConnection(backgroundConnection)
   // check if we are unlocked first
-  accountManager.getState(function (err, metamaskState) {
+  backgroundConnection.getState(function (err, metamaskState) {
     if (err) return cb(err)
-    startApp(metamaskState, accountManager, opts)
+    startApp(metamaskState, backgroundConnection, opts)
       .then((store) => {
         cb(null, store)
       })
   })
 }
 
-async function startApp (metamaskState, accountManager, opts) {
+async function startApp (metamaskState, backgroundConnection, opts) {
   // parse opts
   if (!metamaskState.featureFlags) metamaskState.featureFlags = {}
 
@@ -59,7 +59,7 @@ async function startApp (metamaskState, accountManager, opts) {
     }))
   }
 
-  accountManager.on('update', function (metamaskState) {
+  backgroundConnection.on('update', function (metamaskState) {
     store.dispatch(actions.updateMetamaskState(metamaskState))
   })
 

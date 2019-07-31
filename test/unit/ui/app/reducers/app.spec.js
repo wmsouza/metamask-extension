@@ -1,6 +1,6 @@
 import assert from 'assert'
-import reduceApp from '../../../../../ui/app/reducers/app'
-import * as actions from '../../../../../ui/app/actions'
+import reduceApp from '../../../../../ui/app/ducks/app/app'
+import * as actions from '../../../../../ui/app/store/actions'
 
 describe('App State', () => {
 
@@ -270,18 +270,6 @@ describe('App State', () => {
     assert.equal(state.isLoading, true)
   })
 
-  it('shows new vault seed', () => {
-    const state = reduceApp(metamaskState, {
-      type: actions.SHOW_NEW_VAULT_SEED,
-      value: 'test seed words',
-    })
-
-    assert.equal(state.currentView.name, 'createVaultComplete')
-    assert.equal(state.currentView.seedWords, 'test seed words')
-    assert.equal(state.transForward, true)
-    assert.equal(state.isLoading, false)
-  })
-
   it('shows new account screen', () => {
     const state = reduceApp(metamaskState, {
       type: actions.NEW_ACCOUNT_SCREEN,
@@ -437,21 +425,11 @@ describe('App State', () => {
     })
 
     assert.equal(state.currentView.name, 'accounts')
-    assert.equal(state.currentView.seedWords, undefined)
     assert.equal(state.transForward, true)
     assert.equal(state.isLoading, false)
     assert.equal(state.warning, null)
     assert.equal(state.scrollToBottom, false)
     assert.equal(state.forgottenPassword, false)
-  })
-
-  it('shows notice', () => {
-    const state = reduceApp(metamaskState, {
-      type: actions.SHOW_NOTICE,
-    })
-
-    assert.equal(state.transForward, true)
-    assert.equal(state.isLoading, false)
   })
 
   it('reveals account', () => {
@@ -709,7 +687,7 @@ describe('App State', () => {
   })
 
   it('hides sub loading indicator', () => {
-    const oldState = {...metamaskState, ...oldState}
+    const oldState = {...metamaskState, isSubLoading: true }
     const state = reduceApp(oldState, {
       type: actions.HIDE_SUB_LOADING_INDICATION,
     })
